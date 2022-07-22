@@ -2,7 +2,7 @@
 
 ## SDK 下载
 
-[下载地址](https://git.xindong.com/xd-platform/xdgsdk-6.0/xdsdk-unity-pc/uploads/464130511f448c3c917196a584228024/xd-pc-sdk.unitypackage)
+[下载地址](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/1.0.0/xd-pc-sdk.unitypackage)
 
 ## 添加依赖
 
