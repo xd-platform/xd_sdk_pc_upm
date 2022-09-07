@@ -132,9 +132,11 @@ XDSDK.UserStatusChangeDelegate = new UserStatusChangeDelegate {
 
 ```cs
 public enum LoginType { 
-    Default = -1,   // 自动登录，以上次登录成功的信息登录
-    Guest  = 0,     // 游客登录
-    TapTap = 5,     //Tap 登录
+    Default     = -1,   // 自动登录，以上次登录成功的信息登录
+    Guest       = 0,    // 游客登录
+    Apple       = 2,    // 苹果登录
+    Google      = 3,    // Google 登录
+    TapTap      = 5,    //Tap 登录
 }
 ```
 
@@ -178,27 +180,23 @@ XDSDK.OpenUserCenter();
 
 ## 支付
 
-### 国内支付
+### 支付
 
-目前支持微信和支付宝，采用内置浏览器的 Web 支付方式
+国内目前支持微信和支付宝，采用内置浏览器的 Web 支付方式；海外目前支持跳转官网浏览器支付方式
 
 ```cs
 try {
-    await XDSDK.Pay(serverId, roleId, skuCode);
+    await XDSDK.PayWithWeb(serverId, roleId, productId, 
+        orderId: orderId,
+        productName: productName,
+        payAmount: payAmount,
+        extras: extras);
     XDLogger.Debug("支付完成");
 } catch (TaskCanceledException) {
     XDLogger.Debug("取消支付");
 } catch (Exception e) {
     XDLogger.Debug($"支付异常: {e}");
 }
-```
-
-### 海外支付
-
-目前支持跳转官网浏览器支付方式
-
-```cs
-XDSDK.PayWithWeb(sid, rid);
 ```
 
 ## 打开客服中心
