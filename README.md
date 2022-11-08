@@ -2,19 +2,19 @@
 
 ## SDK 下载
 
-[下载地址](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/1.0.0/xd-pc-sdk.unitypackage)
+[下载地址](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.7.0/xd-pc-sdk.unitypackage)
 
 ## 添加依赖
 
 ### UPM 依赖
 
 ```json
-"com.leancloud.storage": "https://github.com/leancloud/csharp-sdk-upm.git#storage-0.10.14",
-"com.leancloud.realtime": "https://github.com/leancloud/csharp-sdk-upm.git#realtime-0.10.14",
-"com.taptap.tds.bootstrap": "https://github.com/TapTap/TapBootstrap-Unity.git#3.11.0",
-"com.taptap.tds.common": "https://github.com/TapTap/TapCommon-Unity.git#3.11.0",
-"com.taptap.tds.login": "https://github.com/taptap/TapLogin-Unity.git#3.11.0",
-"com.taptap.tds.tapdb": "https://github.com/TapTap/TapDB-Unity.git#3.11.0",
+"com.leancloud.storage": "https://github.com/leancloud/csharp-sdk-upm.git#storage-0.10.19",
+"com.leancloud.realtime": "https://github.com/leancloud/csharp-sdk-upm.git#realtime-0.10.19",
+"com.taptap.tds.bootstrap": "https://github.com/TapTap/TapBootstrap-Unity.git#3.16.2",
+"com.taptap.tds.common": "https://github.com/TapTap/TapCommon-Unity.git#3.16.2",
+"com.taptap.tds.login": "https://github.com/taptap/TapLogin-Unity.git#3.16.2",
+"com.taptap.tds.tapdb": "https://github.com/TapTap/TapDB-Unity.git#3.16.2",
 "com.unity.textmeshpro": "3.0.6",
 ```
 
@@ -136,7 +136,7 @@ public enum LoginType {
     Guest       = 0,    // 游客登录
     Apple       = 2,    // 苹果登录
     Google      = 3,    // Google 登录
-    TapTap      = 5,    //Tap 登录
+    TapTap      = 5,    // Tap 登录
 }
 ```
 
