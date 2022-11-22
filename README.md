@@ -23,6 +23,11 @@
 SDK 中使用到了付费 PC WebView 插件：[3D WebView for Windows and macOS](https://assetstore.unity.com/packages/tools/gui/3d-webview-for-windows-and-macos-web-browser-154144)
 内部游戏可以联系 TDS 获得；外部游戏则需要自行购买。将插件导入到 Unity 工程即可。
 
+### Steam 插件
+
+XD SDK 使用 [Steamworks.NET](https://steamworks.github.io/) 支持 Steam 授权，开发者可以自行下载 Steamworks.NET SDK 到工程。
+XD SDK 通过 xd-pc-sdk-steam-wrapper 插件感知是否要用 Steam SDK 授权，即安装 xd-pc-sdk-steam-wrapper.unitypackage 插件，则认为是 Steam 包，通过 Steam SDK 授权；否则通过 Web 获得 Steam 授权。
+
 ## 配置信息
 
 与移动端一致，在 Resources 目录下放置 XDConfig.json，只要内容包括：
@@ -137,6 +142,7 @@ public enum LoginType {
     Apple       = 2,    // 苹果登录
     Google      = 3,    // Google 登录
     TapTap      = 5,    // Tap 登录
+    Steam       = 19,   // Steam 登录
 }
 ```
 
@@ -148,6 +154,19 @@ try {
     ResultText.text = $"Tap登录成功：{user.NickName} userId: {user.UserId} kid: {user.AccessToken.Kid}";
 } catch (Exception e) {
     ResultText.text = $"登录失败：{e}";
+}
+```
+
+### 主机登录
+
+目前只支持 Steam 登录
+
+```cs
+try {
+    XDUser user = await XDSDK.LoginByConsole();
+    ResultText.text = $"Steam 主机登录成功：{user.NickName} userId: {user.UserId} kid: {user.AccessToken.Kid}";
+} catch (Exception e) {
+    ResultText.text = $"Steam 主机登录失败：code: {e}";
 }
 ```
 
