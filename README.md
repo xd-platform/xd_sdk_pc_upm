@@ -26,7 +26,8 @@ SDK 中使用到了付费 PC WebView 插件：[3D WebView for Windows and macOS]
 ### Steam 插件
 
 XD SDK 使用 [Steamworks.NET](https://steamworks.github.io/) 支持 Steam 授权，开发者可以自行下载 Steamworks.NET SDK 到工程。
-XD SDK 通过 xd-pc-sdk-steam-wrapper 插件感知是否要用 Steam SDK 授权，即安装 xd-pc-sdk-steam-wrapper.unitypackage 插件，则认为是 Steam 包，通过 Steam SDK 授权；否则通过 Web 获得 Steam 授权。
+
+XD SDK 通过 [xd-pc-sdk-steam-wrapper.unitypackage](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.8.0/xd-pc-sdk-steam-wrapper.unitypackage) 插件感知是否要用 Steam SDK 授权，即安装 [xd-pc-sdk-steam-wrapper.unitypackage](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.8.0/xd-pc-sdk-steam-wrapper.unitypackage) 插件，则认为是 Steam 包，通过 Steam SDK 授权；否则通过 Web 获得 Steam 授权。
 
 ## 配置信息
 
