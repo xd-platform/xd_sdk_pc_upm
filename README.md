@@ -54,6 +54,10 @@ XD SDK 通过 [xd-pc-sdk-steam-wrapper.unitypackage](https://github.com/xd-platf
 }
 ```
 
+### Steam 配置
+
+如果需要支持 Steam 主机登录，需要将 steam_appid.txt 放置 Unity 工程根目录下（其中只包括 Steam app id）。
+
 ## 日志调试
 
 ```cs
