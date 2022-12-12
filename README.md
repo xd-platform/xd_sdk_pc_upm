@@ -2,19 +2,19 @@
 
 ## SDK 下载
 
-[下载地址](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.7.0/xd-pc-sdk.unitypackage)
+[下载地址](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.8.1/xd-pc-sdk.unitypackage)
 
 ## 添加依赖
 
 ### UPM 依赖
 
 ```json
-"com.leancloud.storage": "https://github.com/leancloud/csharp-sdk-upm.git#storage-0.10.19",
-"com.leancloud.realtime": "https://github.com/leancloud/csharp-sdk-upm.git#realtime-0.10.19",
-"com.taptap.tds.bootstrap": "https://github.com/TapTap/TapBootstrap-Unity.git#3.16.2",
-"com.taptap.tds.common": "https://github.com/TapTap/TapCommon-Unity.git#3.16.2",
-"com.taptap.tds.login": "https://github.com/taptap/TapLogin-Unity.git#3.16.2",
-"com.taptap.tds.tapdb": "https://github.com/TapTap/TapDB-Unity.git#3.16.2",
+"com.leancloud.storage": "https://github.com/leancloud/csharp-sdk-upm.git#storage-1.0.2",
+"com.leancloud.realtime": "https://github.com/leancloud/csharp-sdk-upm.git#realtime-1.0.2",
+"com.taptap.tds.bootstrap": "https://github.com/TapTap/TapBootstrap-Unity.git#3.16.5",
+"com.taptap.tds.common": "https://github.com/TapTap/TapCommon-Unity.git#3.16.5",
+"com.taptap.tds.login": "https://github.com/taptap/TapLogin-Unity.git#3.16.5",
+"com.taptap.tds.tapdb": "https://github.com/TapTap/TapDB-Unity.git#3.16.5",
 "com.unity.textmeshpro": "3.0.6",
 ```
 
@@ -27,7 +27,7 @@ SDK 中使用到了付费 PC WebView 插件：[3D WebView for Windows and macOS]
 
 XD SDK 使用 [Steamworks.NET](https://steamworks.github.io/) 支持 Steam 授权，开发者可以自行下载 Steamworks.NET SDK 到工程。
 
-XD SDK 通过 [xd-pc-sdk-steam-wrapper.unitypackage](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.8.0/xd-pc-sdk-steam-wrapper.unitypackage) 插件感知是否要用 Steam SDK 授权，即安装 [xd-pc-sdk-steam-wrapper.unitypackage](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.8.0/xd-pc-sdk-steam-wrapper.unitypackage) 插件，则认为是 Steam 包，通过 Steam SDK 授权；否则通过 Web 获得 Steam 授权。
+XD SDK 通过 `XD_STEAM_SUPPORT` 宏确定是否要通过 Steam SDK 授权，即声明 `XD_STEAM_SUPPORT` 宏，则认为是 Steam 包，通过 Steam SDK 授权；否则通过 Web 获得 Steam 授权。
 
 ## 配置信息
 
