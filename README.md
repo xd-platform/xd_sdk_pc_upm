@@ -2,15 +2,15 @@
 
 ## SDK 下载
 
-[下载地址](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.8.1/xd-pc-sdk.unitypackage)
+[下载地址](https://github.com/xd-platform/xd_sdk_pc_upm/releases/download/6.8.2/xd-pc-sdk.unitypackage)
 
 ## 添加依赖
 
 ### UPM 依赖
 
 ```json
-"com.leancloud.storage": "https://github.com/leancloud/csharp-sdk-upm.git#storage-1.0.2",
-"com.leancloud.realtime": "https://github.com/leancloud/csharp-sdk-upm.git#realtime-1.0.2",
+"com.leancloud.storage": "https://github.com/leancloud/csharp-sdk-upm.git#storage-1.0.3",
+"com.leancloud.realtime": "https://github.com/leancloud/csharp-sdk-upm.git#realtime-1.0.3",
 "com.taptap.tds.bootstrap": "https://github.com/TapTap/TapBootstrap-Unity.git#3.16.5",
 "com.taptap.tds.common": "https://github.com/TapTap/TapCommon-Unity.git#3.16.5",
 "com.taptap.tds.login": "https://github.com/taptap/TapLogin-Unity.git#3.16.5",
@@ -132,6 +132,10 @@ XDSDK.UserStatusChangeDelegate = new UserStatusChangeDelegate {
     // 登出回调
     OnLogout = () => {
         ResultText.text = "退出登录";
+    },
+    // 登出后签署协议回调
+    OnProtocolAgreedAfterLogout = () => {
+        ResultText.text = "退出登录后签署协议";
     }
 };
 ```
